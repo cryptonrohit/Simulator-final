@@ -1,0 +1,5 @@
+<select class="btn btn-info dropdown-toggle" [(ngModel)]="statusvalue"  (ngModelChange)=statusvaluechange()>
+    <option *ngFor="let status of statusValues"  [ngValue]="status">
+        {{status.name}}
+    </option>
+</select>

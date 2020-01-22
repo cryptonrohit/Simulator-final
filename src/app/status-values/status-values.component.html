@@ -1,0 +1,76 @@
+
+<!-- <button style="height:25px;width:25px;color: palevioletred;">
+    <span class="glyphicon glyphicon-info-sign" (click)=expandInfo()></span>
+</button>
+<span *ngIf="expandInfoValue" style="border: 2px solid palevioletred;">
+    <span style="color: blue;">  (You can change the connector Status values from the dropdown list)  </span>
+</span> -->
+
+<!-- <table class="col-sm-6">
+    <h3 ><u>Charger Status Values</u></h3>
+    <select [(ngModel)]="chargervalue" >
+        <option *ngFor="let status_state of chargerStatusValues" [ngValue]="status_state" disabled>
+           {{status_state.status}}
+        </option>
+     </select><br/>
+     Current selected Status value is: <span>{{chargervalue.status}}  </span><br/><br/>
+</table>
+
+<table class="col-sm-6">
+    <h3 ><u>Connector Status Values</u></h3>
+    <select [(ngModel)]="connectorvalue" >
+        <option *ngFor="let status of connectorstatusValues" [ngValue]="status">
+           {{status.name}}
+        </option>
+     </select><br/>
+     Current selected Status value is: <span>{{connectorvalue.name}}  </span><br/><br/>
+    </table> -->
+
+<!-- <div class="form-inline">
+    <div>
+        <h3 ><u>Charger Status Values</u></h3>
+    <select [(ngModel)]="chargervalue" >
+        <option *ngFor="let status_state of chargerStatusValues" [ngValue]="status_state" disabled>
+           {{status_state.status}}
+        </option>
+     </select><br/>
+     Current selected Status value is: <span>{{chargervalue.status}}  </span>
+    </div>
+    
+    <div >
+        <h3 ><u>Connector Status Values</u></h3>
+     <select [(ngModel)]="connectorvalue" >
+         <option *ngFor="let status of connectorstatusValues" [ngValue]="status">
+            {{status.name}}
+         </option>
+      </select><br/>
+      Current selected Status value is: <span>{{connectorvalue.name}}  </span>
+    </div>     
+</div> -->
+<div>
+    <table class="a col-sm-4">
+        <div>
+            <h3 ><u>Charger Status Values</u></h3>
+        <select [(ngModel)]="chargervalue" (ngModelChange)="chargerStatusValuesChange()">
+            <option *ngFor="let status_state of chargerStatusValues" [ngValue]="status_state" >
+               {{status_state.status}}
+            </option>
+        </select><br/>
+        Current selected Status value is: <span>{{chargervalue.status}}  </span><br/><br/>
+        </div>
+        
+    </table>
+ 
+    <table class="b col-sm-4">
+        <div>
+            <h3 ><u>Connector Status Values</u></h3>
+        <select [(ngModel)]="connectorvalue" [disabled]="statusvalue? true : false" [style.color]="statusvalue? 'grey': 'darkgoldenrod'">
+            <option *ngFor="let status of connectorstatusValues" [ngValue]="status">
+               {{status.name}}
+            </option>
+        </select><br/>
+        Current selected Status value is: <span [style.color]="statusvalue? 'grey': 'darkgoldenrod'">{{connectorvalue.name}}  </span><br/><br/>
+        </div>
+        
+    </table>
+</div>

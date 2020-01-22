@@ -1,0 +1,36 @@
+h3{
+    font-size: x-large;
+    color: darkmagenta;
+    margin-top: 20px;
+}
+div{
+    margin-left: 10px;
+    
+}
+select{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: darkgoldenrod;
+}
+option{
+    color: darkgoldenrod;
+    color: rgb(31, 84, 102);
+}
+span{
+    color:green;
+}
+
+.b{
+    border: 1.5px solid black;
+    float: left;
+    margin-left: 10px;
+  }
+.a{
+    border: 1.5px solid black;
+    float: left;
+    margin-right: 250px;
+    
+}
+table{
+    margin-top: 50px;
+}

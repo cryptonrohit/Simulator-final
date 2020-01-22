@@ -1,0 +1,19 @@
+<!-- <app-main-heading></app-main-heading> -->
+
+<div *ngIf="!loginValue">
+    <form (submit)="loginUser($event)">
+        <label style="margin-right: 5px;">Username: </label>
+        <input type="text" [(ngModel)]="Username" name ="something" placeholder="Username" id="username"  style="margin-right: 20px;">
+        <label style="margin-right: 5px;">Password: </label>
+        <input type="password" [(ngModel)]="Password" name ="something" placeholder="Password" id="password" style="margin-right: 20px;">
+        <button (click)="onSubmit()" style="margin-top: 20px;">
+            <!-- <a [routerLink]="connectNavigation" style="text-decoration: none;">Submit</a>-->Submit 
+        </button>
+    </form>
+    
+</div>
+
+
+<div *ngIf="loginValue">
+        <app-connect></app-connect>
+</div>

@@ -1,0 +1,18 @@
+.start{
+    color: green;margin-bottom: 30px;
+    text-align: left;
+}
+.stop{
+    color: red;margin-bottom: 30px;
+}
+.disconnect{
+    color: blue;
+}
+.a{
+    margin-right: 10%;    
+    margin-top: 2%;
+}
+.b{
+    margin-top: 2%;
+}
+

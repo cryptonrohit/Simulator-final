@@ -1,0 +1,35 @@
+<!-- <div *ngFor="let value of employee">
+    {{value.id}}-{{value.name}}-{{value.age}}
+</div> -->
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th><b>ID</b></th>
+            <th><b>Name</b></th>
+            <th><b>Age</b></th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let data of employee">
+        
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.age}}</td>
+        
+        <button class="btn btn-primary" (click)=onClickDelete()>Delete</button>        
+        </tr>
+    </tbody>
+    
+</table><br/>
+
+
+<div>    
+    id:<input type="input" [(ngModel)]="idvalue">
+    name:<input type="input" [(ngModel)]="namevalue">
+    age:<input type="input" [(ngModel)]="agevalue">
+    <button (click)=onSubmit()>Save</button>
+</div>
+
+

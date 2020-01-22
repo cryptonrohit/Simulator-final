@@ -1,0 +1,19 @@
+<!-- <app-main-heading></app-main-heading> -->
+<!-- <app-overview-page></app-overview-page> -->
+<div>
+    <button  class="a btn btn-primary" (click)="startcharging()">       
+        Start Transaction
+    </button>
+    <p class="start" *ngIf="showValueforstart">Transaction is started!</p>
+    
+    
+    <button class="b btn btn-primary" [disabled]="!stopChargingEnable? true :false"
+      (click)="stopcharging()">
+        Stop Transaction
+    </button>
+    
+</div><br/><br/>
+
+
+<p class="stop" *ngIf="showValueforstop">Transaction is stopped!</p>
+<p class="disconnect" *ngIf="showValuefordisconnect">Charger is disconnected!</p>
