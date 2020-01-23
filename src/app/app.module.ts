@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { OverviewPageComponent } from './overview-page/overview-page.component';
+import { OverviewPageComponent } from './components/overview-page/overview-page.component';
 import { ConnectComponent } from './connect/connect.component';
 import { StatusValuesComponent } from './status-values/status-values.component';
 import { HttpClientModule } from '@angular/common/http'
