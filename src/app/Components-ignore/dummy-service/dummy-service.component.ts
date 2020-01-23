@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataServiceService } from '../data-service.service';
-import { Data } from '../data.model ';
+import { DataServiceService } from '../../Services-ignore/data-service.service';
+import { Data } from '../../Model-ignore/data.model ';
 import { Config } from 'protractor';
 import { HttpErrorResponse } from '@angular/common/http';
 

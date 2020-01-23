@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { Data } from './data.model ';
+import { Data } from '../Model-ignore/data.model ';
 import { convertActionBinding } from '@angular/compiler/src/compiler_util/expression_converter';
 
 @Injectable({

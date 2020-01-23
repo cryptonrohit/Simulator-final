@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { StatusValues } from '../statusValue.model';
-import { ChargerStatusValues } from '../charger-statusValues.model';
+import { StatusValues } from '../../Model/statusValue.model';
+import { ChargerStatusValues } from '../../Model/charger-statusValues.model';
 
 @Component({
   selector: 'app-status-values',

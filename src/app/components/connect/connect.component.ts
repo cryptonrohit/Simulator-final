@@ -1,9 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { ConnectService } from '../connect.service';
+import { ConnectService } from '../../Services/connect.service';
 import { HttpClient } from '@angular/common/http';
-import { Connect } from '../connect.model';
-import { emptyArray } from '../emptyArray.model';
+import { Connect } from '../../Model/connect.model';
 
 
 @Component({

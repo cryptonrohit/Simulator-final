@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChargerStatusValues } from '../charger-statusValues.model';
+import { ChargerStatusValues } from '../../Model/charger-statusValues.model';
 
 @Component({
   selector: 'app-charger-status-values',

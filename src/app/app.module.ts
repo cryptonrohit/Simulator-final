@@ -4,25 +4,23 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
 import { OverviewPageComponent } from './components/overview-page/overview-page.component';
-import { ConnectComponent } from './connect/connect.component';
-import { StatusValuesComponent } from './status-values/status-values.component';
+import { ConnectComponent } from './components/connect/connect.component';
+import { StatusValuesComponent } from './components/status-values/status-values.component';
 import { HttpClientModule } from '@angular/common/http'
-import { DataServiceService } from './data-service.service';
-import { DummyServiceComponent } from './dummy-service/dummy-service.component';
-import { EmployeeService } from './employee.service';
-import { DummyEmployeeComponent } from './dummy-employee/dummy-employee.component';
-import { ConnectorComponent } from './connector/connector.component';
-import { TransactionComponent } from './transaction/transaction.component';
-import { ChargerStatusValuesComponent } from './charger-status-values/charger-status-values.component';
-import { SubtenantValuesComponent } from './subtenant-values/subtenant-values.component';
-import { HtmlComponent } from './html/html.component';
+import { DataServiceService } from './Services-ignore/data-service.service';
+import { DummyServiceComponent } from './Components-ignore/dummy-service/dummy-service.component';
+import { EmployeeService } from './Services-ignore/employee.service';
+import { DummyEmployeeComponent } from './Components-ignore/dummy-employee/dummy-employee.component';
+import { ConnectorComponent } from './Components-ignore/connector/connector.component';
+import { TransactionComponent } from './components/transaction/transaction.component';
+import { ChargerStatusValuesComponent } from './Components-ignore/charger-status-values/charger-status-values.component';
+import { SubtenantValuesComponent } from './Components-ignore/subtenant-values/subtenant-values.component';
+import { HtmlComponent } from './Components-ignore/html/html.component';
 
 @NgModule({ 
   declarations: [
     AppComponent,
-    LoginComponent,
     OverviewPageComponent,
     ConnectComponent,
     StatusValuesComponent,

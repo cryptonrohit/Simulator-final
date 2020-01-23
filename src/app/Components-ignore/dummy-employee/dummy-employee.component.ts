@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EmployeeService } from '../employee.service';
-import { Employee } from '../employee.model';
+import { EmployeeService } from '../../Services-ignore/employee.service';
+import { Employee } from '../../Model-ignore/employee.model';
 import { HttpClient } from '@angular/common/http';
 
 @Component({

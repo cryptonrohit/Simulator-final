@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { StatusValues } from '../statusValue.model';
+import { StatusValues } from '../../Model/statusValue.model';
 import { ThrowStmt } from '@angular/compiler';
 
 @Component({
