@@ -1,4 +1,4 @@
-export class StatusValues{
-    id:number;
-    name:string
+export class StatusValues {
+    id: number;
+    name: string;
 }

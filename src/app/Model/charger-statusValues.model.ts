@@ -1,4 +1,4 @@
-export class ChargerStatusValues{
-    id:number;
-    status:string;
+export class ChargerStatusValues {
+    id: number;
+    status: string;
 }
