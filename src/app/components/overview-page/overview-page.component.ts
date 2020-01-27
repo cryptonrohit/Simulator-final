@@ -8,18 +8,18 @@ import { Router } from '@angular/router';
 })
 export class OverviewPageComponent implements OnInit {
 
-  startNavigation ="start";
-  stopNavigation = "stop";
-  
-  constructor(private route : Router) { }
+  startNavigation = 'star';
+  stopNavigation = 'stop';
+
+  constructor(private route: Router) { }
 
   ngOnInit() {
   }
 
-  onClickConnector(){
+  onClickConnector( ) {
     this.route.navigate(['connector']);
   }
-  onClickTransaction(){
+  onClickTransaction() {
     this.route.navigate(['transaction']);
   }
 

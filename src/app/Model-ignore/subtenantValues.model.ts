@@ -1,4 +1,4 @@
-export class SubtenantValues{
-    id:number;
+export class SubtenantValues {
+    id: number;
     value: string;
 }

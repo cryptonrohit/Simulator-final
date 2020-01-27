@@ -11,61 +11,47 @@ import { Connect } from '../../Model/connect.model';
   styleUrls: ['./connect.component.css']
 })
 export class ConnectComponent implements OnInit {
-  connectionValue:string = 'Connect';
+  connectionValue = 'Connect';
 
-  //someValue:string;
+  linkid = 'wss://ebusdev-chargerapp-ebusdev.eu1.mindsphere.io/ChargingStations';
+  chargerid = '';
+  chargeridvalue = false;
+  subtenantid = '';
+  subtenantidvalue = false;
 
-  linkid:string="wss://ebusdev-chargerapp-ebusdev.eu1.mindsphere.io/ChargingStations";
-  chargerid:string="";
-  chargeridvalue:boolean=false;
-  subtenantid:string="";
-  subtenantidvalue:boolean=false;
-  
-  showconnect:boolean=false;
-  //showdisconnect:boolean=false;
-  connect:Connect[];
-  body:{};
+  showconnect = false;
+  connect: Connect[];
+  body: {};
 
-  //dummy:emptyArray[]=[1];
 
-  constructor(private connectservice: ConnectService, private _http:HttpClient) { }
+  constructor(private connectservice: ConnectService) { }
 
   ngOnInit() {
-    var c = this.connectservice.getCentralStationvalue()
-    .subscribe(data=> this.connect = data)
-    console.log(c);
+    return this.connectservice.getCentralStationvalue()
+    .subscribe(data => this.connect = data);
   }
 
-onClickConnect(){
+onClickConnect() {
   this.showconnect = true;
-  var body = {
-    centralStationid: this.linkid + '/' +this.subtenantid + '/' +this.chargerid,
+  const body = {
+    centralStationid: this.linkid + '/' + this.subtenantid + '/' + this.chargerid,
     chargerid: this.chargerid,
     subtenantid: this.subtenantid
-  }
-  //this.someValue = this.chargerid; 
-  this.connect.push(body)
-  //return this.connectservice.sendCentralStationvalue(this.connect).subscribe(data=>this.connect = data)
-   
+  };
+  this.connect.push(body);
 }
 
-onClickDisconnect(){
-  // this.showdisconnect = true;
+onClickDisconnect() {
   this.showconnect = false;
-  this.connect.pop()
+  this.connect.pop();
 }
 
-chargeId(){
-  this.chargerid.length != 0? this.chargeridvalue = true : this.chargeridvalue = false;
+chargeId() {
+  this.chargerid.length !== 0 ? this.chargeridvalue = true : this.chargeridvalue = false;
 }
 
-SubtenantId(){
-  this.subtenantid.length != 0? this.subtenantidvalue = true : this.subtenantidvalue = false;
+SubtenantId() {
+  this.subtenantid.length !== 0 ? this.subtenantidvalue = true : this.subtenantidvalue = false;
 }
 
-// onClickAdd(){
-//   var some = 1;
-//   this.dummy.push(some);  
-// }
-
-}  
+}

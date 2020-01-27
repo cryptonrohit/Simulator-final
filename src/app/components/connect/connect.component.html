@@ -7,11 +7,8 @@
             <input class="form-control" type="text" placeholder="Enter the Subtenant-id" [(ngModel)]="subtenantid" (ngModelChange)="SubtenantId()">
         </div> 
     
-        <!-- <app-subtenant-values (selectedValue)="onSelected($event)"></app-subtenant-values> -->
         <label>Charger-id:  </label>
-        <input class="form-control" type="text" placeholder="Enter the Charger-id" [(ngModel)]="chargerid" (ngModelChange)="chargeId()">&nbsp;
-    
-        <!-- <button class="gly glyphicon glyphicon-plus" (click)="onClickAdd()"></button> -->        
+        <input class="form-control" type="text" placeholder="Enter the Charger-id" [(ngModel)]="chargerid" (ngModelChange)="chargeId()">&nbsp;    
 </div>
 
 <div>
@@ -23,13 +20,6 @@
     <span *ngFor="let data of connect">
         {{data.centralStationid}}
     </span><br/>
-    <!-- <div *ngIf="showdisconnect">
-        <label class="disconnect">You are disconnected to Charger id:</label>
-        <span *ngFor="let data of connect">
-           {{someValue}}
-        </span>
-    </div>     -->
-
     <button class="btn btn-primary" (click)="onClickConnect()" [disabled]= "subtenantidvalue && chargeridvalue? false : true">Connect</button>
     <button class="btn btn-danger" (click)="onClickDisconnect()" [disabled]= "!showconnect? true : false">Disconnect</button>
 

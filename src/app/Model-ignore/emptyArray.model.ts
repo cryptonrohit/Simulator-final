@@ -1,3 +1,3 @@
-export class emptyArray{
+export class EmptyArray {
 
 }

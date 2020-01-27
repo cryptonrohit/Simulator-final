@@ -1,5 +1,5 @@
-export class Employee{
-    id:number;
-    name:string;
-    age:number;
+export class Employee {
+    id: number;
+    name: string;
+    age: number;
 }

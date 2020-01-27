@@ -8,34 +8,21 @@ import { Router } from '@angular/router';
 })
 export class TransactionComponent implements OnInit {
 
-  stopChargingEnable:boolean = false;
-  startChargingEnable:boolean = false;
-  showDisconnectEnable:boolean = true;
-  showValueforstart:boolean = false;
-  showValueforstop:boolean = false;
-  showValuefordisconnect:boolean = false;
-  constructor(private route:Router) { }
+  startChargingEnable = false;
+  showValueforstart = false;
+  showValueforstop = false;
+  constructor(private route: Router) { }
 
   ngOnInit() {
   }
 
-  startcharging(){
-        this.stopChargingEnable = true;
+  startcharging() {
         this.showValueforstart = true;
         this.showValueforstop = false;
     }
-  disconnect(){
-      this.startChargingEnable = false;
-      this.stopChargingEnable = false;
-      this.showValuefordisconnect = true;
-      this.showValueforstart = false;
-      this.showValueforstop = false;
-    }
-  stopcharging(){
-      //this.route.navigate(['stop']);
+  stopcharging() {
       this.showValueforstop = true;
       this.showValueforstart = false;
-      this.showValuefordisconnect = false;
   }
 
 }
