@@ -5,14 +5,17 @@
 .stop{
     color: red;margin-bottom: 30px;
 }
-.disconnect{
-    color: blue;
-}
 .a{
     margin-right: 10%;    
-    margin-top: 2%;
+    margin-top: 5%;
 }
 .b{
-    margin-top: 2%;
+    margin-top: 5%;
+}
+.top{
+    margin-top: 16%;
+}
+.c{
+    margin-top: 5%;
 }
 

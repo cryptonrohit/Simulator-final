@@ -38,14 +38,6 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot([
-      {path: 'connect', component: ConnectComponent},
-      {path: 'overview-page', component: OverviewPageComponent},
-      {path: 'connector', component: ConnectorComponent},
-      {path: 'transaction', component: TransactionComponent},
-      {path: 'html', component: HtmlComponent},
-      {path: '', component: OverviewPageComponent}
-    ])
   ],
   providers: [DataServiceService, EmployeeService, SubtenantValuesComponent],
   bootstrap: [AppComponent]

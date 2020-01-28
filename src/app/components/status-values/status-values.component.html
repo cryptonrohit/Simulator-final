@@ -2,7 +2,7 @@
     <table class="a col-sm-4">
         <div>
             <h3 ><u>Charger Status Values</u></h3>
-        <select [(ngModel)]="chargervalue" (ngModelChange)="chargerStatusValuesChange()">
+            <select [(ngModel)]="chargervalue" (ngModelChange)="chargerStatusValuesChange()">
             <option *ngFor="let status_state of chargerStatusValues" [ngValue]="status_state" >
                {{status_state.status}}
             </option>
@@ -14,8 +14,11 @@
  
     <table class="b col-sm-4">
         <div>
+            <input class="form-control" type="text" placeholder="Enter the connector name." 
+                  [(ngModel)]="connectorValueEntered" (ngModelChange)="connectorName()" style="margin-top: 2%;">
+                  
             <h3 ><u>Connector Status Values</u></h3>
-        <select [(ngModel)]="connectorvalue" [disabled]="statusvalue? true : false" [style.color]="statusvalue? 'grey': 'darkgoldenrod'">
+            <select [(ngModel)]="connectorvalue" [disabled]="statusvalue && !connectorBooleanValue ? true : false" [style.color]="statusvalue? 'grey': 'darkgoldenrod'">
             <option *ngFor="let status of connectorstatusValues" [ngValue]="status">
                {{status.name}}
             </option>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-transaction',
@@ -8,10 +7,12 @@ import { Router } from '@angular/router';
 })
 export class TransactionComponent implements OnInit {
 
-  startChargingEnable = false;
   showValueforstart = false;
   showValueforstop = false;
-  constructor(private route: Router) { }
+  stopChargingEnable = false;
+  startChargingEnable = false;
+  connectorInputValue = '';
+  constructor() { }
 
   ngOnInit() {
   }
@@ -19,10 +20,18 @@ export class TransactionComponent implements OnInit {
   startcharging() {
         this.showValueforstart = true;
         this.showValueforstop = false;
+        this.stopChargingEnable = true;
     }
   stopcharging() {
       this.showValueforstop = true;
       this.showValueforstart = false;
+      this.startChargingEnable = false;
+      this.connectorInputValue = null;
   }
-
+  connectorValue() {
+    this.connectorInputValue.length !== 0 ? this.startChargingEnable = true : this.startChargingEnable = false ;
+    if (this.connectorInputValue.length !== 0) {
+      this.stopChargingEnable = false;
+    }
+  }
 }

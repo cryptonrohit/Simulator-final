@@ -1,16 +1,35 @@
-<div>
-    <button  class="a btn btn-primary" (click)="startcharging()">       
-        Start Transaction
-    </button>
-    <p class="start" *ngIf="showValueforstart">Transaction is started!</p>
+<div class="top form-inline">
+    <div class="form-group">
+        <label>Connector: </label>
+        <input class = "form-control" size="39px" type="text" placeholder="Enter the Connector name for starting Transaction" 
+           [(ngModel)] = "connectorInputValue" (ngModelChange)="connectorValue()">
+    </div>    
+</div>
+
+<div class="row">
+    <div class="col-md-2">
+        <button  class="a btn btn-primary" [disabled]="startChargingEnable? false : true" (click)="startcharging()">       
+            Start Transaction
+        </button><br/>
+        <p class="start" *ngIf="showValueforstart">Transaction is started!</p>
+    </div>
     
-    
-    <button class="b btn btn-primary" [disabled]="!stopChargingEnable? true :false"
-      (click)="stopcharging()">
-        Stop Transaction
-    </button>
-    
-</div><br/><br/>
+    <div class="col-md-2">    
+        <button class="b btn btn-primary" [disabled]="!stopChargingEnable? true :false"
+          (click)="stopcharging()">
+            Stop Transaction
+        </button><br/>
+        <p class="stop" *ngIf="showValueforstop && stopChargingEnable">Transaction is stopped!</p>
+    </div> 
+
+    <div class="col-md-2" >
+        <select class = "c btn btn-info dropdown-toggle" [disabled]="startChargingEnable? false : true">
+            <option>--Select--</option>
+            <option>Forcefully Stop</option>
+            <option>1</option>
+        </select> 
+    </div>         
+</div>
 
 
-<p class="stop" *ngIf="showValueforstop">Transaction is stopped!</p>
+

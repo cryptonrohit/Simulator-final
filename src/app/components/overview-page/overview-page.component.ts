@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-overview-page',
@@ -8,19 +7,9 @@ import { Router } from '@angular/router';
 })
 export class OverviewPageComponent implements OnInit {
 
-  startNavigation = 'star';
-  stopNavigation = 'stop';
-
-  constructor(private route: Router) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  onClickConnector( ) {
-    this.route.navigate(['connector']);
-  }
-  onClickTransaction() {
-    this.route.navigate(['transaction']);
   }
 
 }

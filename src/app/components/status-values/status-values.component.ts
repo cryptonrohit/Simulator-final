@@ -12,6 +12,10 @@ export class StatusValuesComponent implements OnInit {
   applyStatusValueToggle = false;
   showConnectorStatusValues = true;
   statusvalue = false;
+
+  connectorValueEntered = '';
+  connectorBooleanValue = false;
+
   constructor() { }
 
   connectorstatusValues: StatusValues[] = [
@@ -38,6 +42,9 @@ export class StatusValuesComponent implements OnInit {
 
   chargerStatusValuesChange() {
     this.chargervalue.id !== 1 ? this.statusvalue = true : this.statusvalue = false;
+  }
+  connectorName() {
+    this.connectorValueEntered.length !== 0 ? this.connectorBooleanValue = true : this.connectorBooleanValue = false;
   }
 
 }
