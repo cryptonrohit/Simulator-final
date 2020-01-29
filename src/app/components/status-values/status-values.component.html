@@ -18,12 +18,12 @@
                   [(ngModel)]="connectorValueEntered" (ngModelChange)="connectorName()" style="margin-top: 2%;">
                   
             <h3 ><u>Connector Status Values</u></h3>
-            <select [(ngModel)]="connectorvalue" [disabled]="statusvalue && !connectorBooleanValue ? true : false" [style.color]="statusvalue? 'grey': 'darkgoldenrod'">
+            <select [(ngModel)]="connectorvalue" [disabled]="!statusvalue && connectorBooleanValue ? false : true" [style.color]="!statusvalue && connectorBooleanValue ? 'darkgoldenrod': 'grey'">
             <option *ngFor="let status of connectorstatusValues" [ngValue]="status">
                {{status.name}}
             </option>
         </select><br/>
-        Current selected Status value is: <span [style.color]="statusvalue? 'grey': 'darkgoldenrod'">{{connectorvalue.name}}  </span><br/><br/>
+        Current selected Status value is: <span [style.color]="!statusvalue && connectorBooleanValue ? 'darkgoldenrod': 'grey'">{{connectorvalue.name}}  </span><br/><br/>
         </div>
         
     </table>
